@@ -4,13 +4,13 @@ self.addEventListener('fetch',(event)=>{
 });
 self.addEventListener('fetch',(event)=>{
     if(event.request.url.includes('.css')){
-        console.log(event.request.url);
-
+        //console.log(event.request.url);
+        console.log('asesoria git');
         const resp = new Response(
-            'body{
+            `body{
                 color:red;
                 background-color: #000;
-            }',
+            }`,
             {
                 headers:{
                     'Content-Type':'text/css',
