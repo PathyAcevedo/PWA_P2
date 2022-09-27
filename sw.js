@@ -1,16 +1,22 @@
-//console.log('SW: hola mundo');
+const IMAGES [
+    'images/img2.jpg'
+];
+
+const EXTENSION = /\.(jpg|jpeg|png|gif|webp)$/gi;
+
 self.addEventListener('fetch',(event)=>{
     console.log('SW: install');
 });
+
 self.addEventListener('fetch',(event)=>{
     if(event.request.url.includes('.css')){
-        //console.log(event.request.url);
-        console.log('asesoria git');
+        console.log(event.request.url);
+
         const resp = new Response(
-            `body{
-                color:red;
-                background-color: #000;
-            }`,
+            ´body{
+                color:#fff;
+                background-color: darkred;
+            }´,
             {
                 headers:{
                     'Content-Type':'text/css',
